@@ -40,5 +40,10 @@
       "text-summary",
       "lcov"
     ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   }
 }
