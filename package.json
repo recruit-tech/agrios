@@ -1,0 +1,44 @@
+{
+  "name": "agrios",
+  "version": "0.1.0",
+  "description": "Package your agreed server as axios adapter",
+  "main": "agrios.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --require @babel/register --require @babel/polyfill test.js",
+    "lint": "standard",
+    "cov": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ghe.misosiru.io/air-design/agrios"
+  },
+  "keywords": [
+    "axios",
+    "agreed"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "@babel/polyfill": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/register": "^7.0.0-beta.44",
+    "agreed-core": "^3.0.0",
+    "axios": "^0.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-power-assert": "^3.0.0-beta.1",
+    "codecov": "^3.0.0",
+    "cross-env": "^5.1.4",
+    "mocha": "^5.1.0",
+    "nyc": "^11.6.0",
+    "power-assert": "^1.5.0",
+    "standard": "^11.0.1"
+  },
+  "nyc": {
+    "reporter": [
+      "text-summary",
+      "lcov"
+    ]
+  }
+}

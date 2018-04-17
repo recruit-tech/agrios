@@ -1,0 +1,6 @@
+# npm
+/node_modules
+
+# cov
+/.nyc_output
+/coverage
