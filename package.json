@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "description": "Package your agreed server as axios adapter",
   "main": "agrios.js",
+  "files": [
+    "agrios.js"
+  ],
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --require @babel/register --require @babel/polyfill test.js",
     "lint": "standard",
-    "cov": "nyc npm test"
+    "cov": "nyc npm test",
+    "dist": "babel index.js > agrios.js",
+    "prepublish": "npm run dist"
   },
   "repository": {
     "type": "git",
