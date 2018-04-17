@@ -29,7 +29,7 @@ axios.default.adapter = agreedAdapter
 
 Then your axios calls get responses from the agreed files.
 
-```
+```js
 axios.get('path/to/agreed-endpoint', { params: { some_key: 'some_value' } })
 ```
 
@@ -37,7 +37,7 @@ This doesn't make an acutual API request, but does get the response from the agr
 
 # API
 
-```
+```js
 const agrios = require('agrios')
 ```
 
