@@ -6,7 +6,7 @@ Agrios packages your `agree` file into [axios adapter][]. If you set it as the `
 
 # Install
 
-    npm install --save-dev https://ghe.misosiru.io/air-design/agrios.git
+    npm install --save-dev agrios
 
 # Usage
 
