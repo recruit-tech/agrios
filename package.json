@@ -1,6 +1,6 @@
 {
   "name": "agrios",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Package your agreed server as axios adapter",
   "main": "agrios.js",
   "files": [
