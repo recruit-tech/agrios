@@ -10,6 +10,7 @@
     "test": "cross-env NODE_ENV=test mocha --require @babel/register --require @babel/polyfill test.js",
     "lint": "standard",
     "cov": "nyc npm test",
+    "codecov": "npm run cov && codecov",
     "dist": "babel index.js > agrios.js",
     "prepublish": "npm run dist"
   },

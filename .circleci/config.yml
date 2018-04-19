@@ -14,3 +14,4 @@ jobs:
             - node_modules
           key: v1-dep-{{ checksum "package.json" }}
       - run: npm test
+      - run: npm run codecov
