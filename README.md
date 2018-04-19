@@ -1,6 +1,9 @@
-# <img width="300" src="https://recruit-tech.github.io/agrios/media/agrios-logo.svg" />
+# <img width="150" src="https://recruit-tech.github.io/agrios/media/agrios-logo.svg" />
 
-> :package: Package your agreed server as [axios adapter][]
+[![CircleCI](https://circleci.com/gh/recruit-tech/agrios.svg?style=svg)](https://circleci.com/gh/recruit-tech/agrios)
+[![codecov](https://codecov.io/gh/recruit-tech/agrios/branch/master/graph/badge.svg)](https://codecov.io/gh/recruit-tech/agrios)
+
+> :package::+1: Package your agreed server as [axios adapter][]
 
 Agrios packages your `agree` file into [axios adapter][]. If you set it as the `adapter` of axios, then it gets responses from the `agree`s of your agreed files. See below for details.
 
