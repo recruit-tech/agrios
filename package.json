@@ -25,16 +25,16 @@
   "license": "MIT",
   "peerDependencies": {
     "axios": "<1",
-    "agreed-core": ">=3 <4"
+    "@agreed/core": ">=5 <6"
   },
   "devDependencies": {
+    "@agreed/core": "^5.0.2",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/register": "^7.8.3",
-    "agreed-core": "^3.2.5",
     "axios": "^0.19.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-power-assert": "^3.0.0-beta.1",

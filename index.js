@@ -2,12 +2,12 @@ const settle = require('axios/lib/core/settle')
 
 const url = require('url')
 
-const completion = require('agreed-core/lib/check/completion')
-const format = require('agreed-core/lib/template/format')
-const bind = require('agreed-core/lib/template/bind')
-const Checker = require('agreed-core/lib/check/checker')
-const hasTemplate = require('agreed-core/lib/template/hasTemplate').hasTemplate
-const isContentJSON = require('agreed-core/lib/check/isContentJSON')
+const completion = require('@agreed/core/lib/check/completion')
+const format = require('@agreed/core/lib/template/format')
+const bind = require('@agreed/core/lib/template/bind')
+const Checker = require('@agreed/core/lib/check/checker')
+const hasTemplate = require('@agreed/core/lib/template/hasTemplate').hasTemplate
+const isContentJSON = require('@agreed/core/lib/check/isContentJSON')
 
 /**
  * @param {Object[]} agrees The array of agrees.

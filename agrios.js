@@ -1,6 +1,8 @@
 "use strict";
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -8,17 +10,17 @@ var settle = require('axios/lib/core/settle');
 
 var url = require('url');
 
-var completion = require('agreed-core/lib/check/completion');
+var completion = require('@agreed/core/lib/check/completion');
 
-var format = require('agreed-core/lib/template/format');
+var format = require('@agreed/core/lib/template/format');
 
-var bind = require('agreed-core/lib/template/bind');
+var bind = require('@agreed/core/lib/template/bind');
 
-var Checker = require('agreed-core/lib/check/checker');
+var Checker = require('@agreed/core/lib/check/checker');
 
-var hasTemplate = require('agreed-core/lib/template/hasTemplate').hasTemplate;
+var hasTemplate = require('@agreed/core/lib/template/hasTemplate').hasTemplate;
 
-var isContentJSON = require('agreed-core/lib/check/isContentJSON');
+var isContentJSON = require('@agreed/core/lib/check/isContentJSON');
 /**
  * @param {Object[]} agrees The array of agrees.
  * @param {Object} config The axios configuration object.
@@ -34,9 +36,9 @@ module.exports = function (agrees) {
       });
 
       var axiosRequest = _objectSpread({}, config, {
-        query: config.params // set axiosRequest.body if axiosRequest.data exists
+        query: config.params
+      }); // set axiosRequest.body if axiosRequest.data exists
 
-      });
 
       if (axiosRequest.data) {
         try {
